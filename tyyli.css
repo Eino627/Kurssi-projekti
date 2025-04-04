@@ -124,3 +124,25 @@
             margin-bottom: 20px; 
             font-size: large;
         }
+        
+        a {
+            color: red;
+            text-decoration: none;
+        }
+    
+        a:hover{
+            color: rgb(255, 103, 103);
+            }
+        
+        a:visited {
+            color: #757575;
+        }
+    
+        button{
+            background-color: red;
+            color: white;
+        }
+    
+        button:hover {
+            background-color:  rgb(255, 103, 103);
+        }
