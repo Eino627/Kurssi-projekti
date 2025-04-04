@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskustelusivu</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+
+        .nappi {
+            position: absolute;
+            top: 100px;
+            left:295px;
+            height:100px;
+            width:100px;
+            font-size:medium;
+          }
+
+        </style>
+</head>
+<body>
+<header>
+        <ul>
+            <li><a href="../index.html">Etusivu</a></li>
+            <li><a href="../työkokemus.html">Työkokemus</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+        </ul>
+    <h1>Keskustelu-sivu</h1>
+</header>
+
+<article>
+  <dialog id="dial" close>
+    <p id="dialogia"></p>
+    <button onclick="closeDialog()">Close</button>
+  </dialog>
+  
+  <form name="foorumi" action="javascript:void(0);" onsubmit="return lähetys()" method="post">
+        <p>Syntymäpäivä <input type="date" name="date"></p>
+        <p>Email <input type="email" name="email"></p>
+        <p>Viestin tyyppi 
+            <select name="vaihtoehto">
+                <option value="kysymys">Kysymys</option>
+                <option value="kommentti">Kommentti</option>
+            </select>
+        </p>
+        <textarea name="viesti" id="viesti" cols="50" rows="4"></textarea>
+        <p><input type="checkbox" name="check"> Hyväksyn, että tietojani käytetään markkinoinnissa</p>
+
+        <button class="nappi" type="submit">Kommentoi</button>
+    </form>
+
+    <script>
+      function lähetys() {
+        
+        let date = document.forms["foorumi"]["date"].value;
+        let email = document.forms["foorumi"]["email"].value;
+        let viestityyppi = document.forms["foorumi"]["vaihtoehto"].value;
+        let viesti = document.forms["foorumi"]["viesti"].value;
+
+
+        if (date =="") {
+          alert ("syntymäpäivä pitää kirjoittaa");
+          return false
+        }
+        
+        if (email =="") {
+          alert ("sähköposti pitää kirjoittaa");
+          return false
+        }
+        
+        if (viesti =="") {
+          alert ("Viesti pitää kirjoittaa");
+          return false
+        }
+        
+        let dialogia = `
+        <strong>Syntymäpäivä:</strong> ${date} <br>
+        <strong>Email:</strong> ${email} <br>
+        <strong>Viestin tyyppi:</strong> ${viestityyppi} <br>
+        <strong>Viesti:</strong> <br>${viesti}
+        `;
+        
+        document.getElementById("dialogia").innerHTML = dialogia;
+
+        document.getElementById("dial").show();
+
+  
+      return false;
+      }
+      function closeDialog() {
+        document.getElementById("dial").close();
+      }
+    </script>
+
+    <hr width="100%" size="2" color="black">
+
+    <p style="font-size: larger; font-weight: bold;">erkki123@joku.fi - 15.6.2023 klo 14:35</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr width="100%" size="2" color="black">
+
+    <p style="font-size: larger; font-weight: bold;">mikko987@mail.com - 23.9.2024 klo 09:05</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr width="100%" size="2" color="black">
+
+    <p style="font-size: larger; font-weight: bold;">anna456@domain.com - 12.3.2024 klo 17:20</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr width="100%" size="2" color="black">
+
+    <p style="font-size: larger; font-weight: bold;">pekka321@anothermail.com - 7.11.2022 klo 13:45</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr width="100%" size="2" color="black">
+
+    <p style="font-size: larger; font-weight: bold;">sofia654@mailbox.com - 30.10.2025 klo 11:15</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+</body>
+</html>

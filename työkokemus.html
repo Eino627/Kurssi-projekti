@@ -3,41 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Työkokemus</title>
 </head>
 <style>
     
-    h3 {text-align: center;
+    article {text-align: center;
     }
-    h1 {text-align: center;
+    header {text-align: center;
     } 
 
-    h4 {text-align: center;}
-    p{text-align: center; 
+    .otsikko {
+    font-size: large;
     }
-
+   
+    p  {text-align: center;
+    
+    }
+    h1 {text-align: center; 
+        
+    }
+    
+    h2 {text-align: center;
+    
+    }
+   
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: #111;
+    }
     
 </style>
+
 <body>
-    <h1>Työkokemus</h6> 
-<article> 
-  <h3>Power 2023</h3>
-   <h4>Turku</h4>
-    <p>Päivitin tietokoneita ja hintalappuja</p>
+    <header>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="portfolio/index.html">Portfolio</a></li>
+            </ul>
+        <h1>Työkokemus</h1>
+    </header>
+    <article> 
+        <details>
+            <summary class="otsikko">
+                <h3>Power 2023</h3>
+                <h4>Turku</h4>
+            </summary>
+                <p>Päivitin tietokoneita ja hintalappuja</p>
+        </details>
+        
+        <details>
+            <summary class="otsikko">
+                <h3>Tokmanni 2024</h3>
+                <h4>Turku</h4>
+            </summary>
+                <p>Hyllytin tavaroita ja neuvoin asiakkaita.</p>
+        </details>
 
-</article>
-<article>
-<h3>Tokmanni 2024</h3>
-<h4>Turku</h4>
-<p>Hyllytin tavaroita ja neuvoin asiakkaita.</p>
-</article>
+        <details>
+            <summary class="otsikko">
+                <h3>Puutyöt 2025(keksitty)</h3>
+                <h4>Tampere</h4>
+            </summary>
+                <p>Autoin kantamaan puita ja haloin puita kirveellä</p>
+        </details>
+    </article>
 
-<article>
-<h3>Puutyöt 2025(keksitty)</h3>
-<h4>Tampere</h4>
-    <p>Autoin kantamaan puita ja haloin puita kirveellä</p>
-</article>
 
-    <p><strong><a href="index.html">Takaisin</a></strong></p>
 </body>
 </html>
