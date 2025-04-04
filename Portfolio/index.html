@@ -2,56 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
     <meta name="avainsanat"content="HTML, Ohjelmointi, portfolio">
     <meta name="kuvaus" content="Tällä sivulla pääsee kaikkiin Einon tekemiin harjoituksiin.">
     <meta name="Tekijä" content="Eino Louento">
-    <link rel="css-tiedosto" href="tyyli.css">
-<style>
-    p  {text-align: center;
-    
-    }
-    h1 {text-align: center; 
-        
-    }
-    
-    h2 {text-align: center;
-    
-    }
-   
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-    
-    li {
-        float: left;
-    }
-    
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    li a:hover {
-        background-color: #111;
-    }
-        
-</style>
+    <link rel="stylesheet" href="../tyyli.css">
+
 </head>
 <body>
     <header>
-            <ul>
-                <li><a href="../index.html">Etusivu</a></li>
-                <li><a href="../työkokemus.html">Työkokemus</a></li>
+            <ul class="uls">
+                <li class="lis"><a href="../index.html">Etusivu</a></li>
+                <li class="lis"><a href="../työkokemus.html">Työkokemus</a></li>
             </ul>
         <h1>Navigointi</h1>
     </header>
@@ -59,8 +24,14 @@
     <article>
         <H2>Portfolio</H2>
             <p>Tässä portfoliossa on Web-ohjelmointi 1 -kurssin harjoituksia</p>
-            <p><a href="keskustelu.html">keskustelu</a></p>
-            <p><a href="media.html">Mediasivu</a></p>
+            <section>
+                <h1><a href="keskustelu.html">keskustelu</a></h1>
+            </section>
+            <section>
+                <h1><a href="media.html">Mediasivu</a></h1>
+            </section>
+            
+            
     </article>
 </body>
 </html>
